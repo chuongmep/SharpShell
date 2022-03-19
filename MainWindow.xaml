@@ -1,0 +1,24 @@
+﻿<Window x:Class="SharpShell.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SharpShell"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="44" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <Button Margin="6" Click="Click1">External process</Button>
+            <Button Margin="6" Click="Click2">In-process</Button>
+        </StackPanel>
+
+        <Grid  x:Name="hostGrid" Grid.Row="1" Margin="10" Background="Transparent">
+            <WindowsFormsHost x:Name="windowsFormsHost"/>
+        </Grid>
+    </Grid>
+</Window>
